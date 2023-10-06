@@ -53,16 +53,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
       allowImplicitScrolling: true,
       autoScrollDuration: 3000,
       infiniteAutoScroll: true,
-      // globalHeader: Align(
-      //   alignment: Alignment.topRight,
-      //   child: SafeArea(
-      //     child: Padding(
-      //       padding: const EdgeInsets.only(top: 16, right: 16),
-      //       child: _buildImage('flutter.png', 100),
-      //     ),
-      //   ),
-      // ),
-      globalFooter: SizedBox(
+           globalFooter: SizedBox(
         width: double.infinity,
         height: 60,
         child: ElevatedButton(
@@ -85,14 +76,14 @@ class OnBoardingPageState extends State<OnBoardingPage> {
           title: "Learn as you go",
           body:
           "2",
-          image: _buildImage('profile_pic_3.jpg'),
+          image: _buildImage('intro_screen_4.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Kids and teens",
           body:
           "3",
-          image: _buildImage('profile_pic_3.jpg'),
+          image: _buildImage('intro_screen_5.png'),
           decoration: pageDecoration,
         ),
 
@@ -112,7 +103,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
             bodyAlignment: Alignment.bottomCenter,
             imageAlignment: Alignment.topCenter,
           ),
-          image: _buildImage('profile_pic_3.jpg'),
+          image: _buildImage('intro_screen_6.png'),
           reverse: true,
         ),
       ],
