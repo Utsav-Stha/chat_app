@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:messenger_app/features/chats/new_chats.dart';
 import 'package:messenger_app/features/home/home_page.dart';
 
+import 'features/home/widgets/pop_up.dart';
 import 'features/profile/profile_page.dart';
 
 
@@ -54,16 +55,25 @@ class _BottomNavigationState
                borderRadius: BorderRadius.circular(20.0),
                color: Colors.black,
              ),
-             child: Row(
-               mainAxisAlignment: MainAxisAlignment.center,
-               crossAxisAlignment: CrossAxisAlignment.center,
-               children: [
-                 Icon(Icons.add,
-                 color: Colors.white,
-                 size: 18,),
-                 Text('New Chat',style: TextStyle(
-                   color: Colors.white,
-                 ),)
+             child: PopupMenuButton(
+               icon:Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(Icons.add,
+                        color: Colors.white,
+                          size: 18,),
+                         Text('New Chat',style: TextStyle(
+                              color: Colors.white,
+                            ),),
+                      ],
+               ),
+               itemBuilder: (ctx)=>[
+
+                 buildPopUp('Add', Icons.add),
+                 buildPopUp('Add', Icons.add),
+                 buildPopUp('Add', Icons.add),
+
                ],
              ),
            ),
@@ -80,5 +90,18 @@ class _BottomNavigationState
         onTap: _onItemTapped,
       ),
     );
+  }
+  PopupMenuItem buildPopUp(String title, IconData icon){
+  return PopupMenuItem(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Icon(icon),
+          SizedBox(
+            width: 10,
+          ),
+          Text(title)
+        ],
+      ));
   }
 }
