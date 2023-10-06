@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'package:introduction_screen/introduction_screen.dart';
-
 import '../../bottom_navigation.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -21,15 +19,6 @@ class OnBoardingPageState extends State<OnBoardingPage> {
     );
   }
 
-  // Widget _buildFullscreenImage() {
-  //   return Image.asset(
-  //     'assets/fullscreen.jpg',
-  //     fit: BoxFit.cover,
-  //     height: double.infinity,
-  //     width: double.infinity,
-  //     alignment: Alignment.center,
-  //   );
-  // }
 
   Widget _buildImage(String assetName, [double width = 350]) {
     return Image.asset('assets/$assetName', width: width);
@@ -43,7 +32,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
       titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
       bodyTextStyle: bodyStyle,
       bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-      pageColor: Colors.white,
+      pageColor: Colors.white24,
       imagePadding: EdgeInsets.zero,
     );
 
@@ -53,55 +42,30 @@ class OnBoardingPageState extends State<OnBoardingPage> {
       allowImplicitScrolling: true,
       autoScrollDuration: 3000,
       infiniteAutoScroll: true,
-           globalFooter: SizedBox(
-        width: double.infinity,
-        height: 60,
-        child: ElevatedButton(
-          child: const Text(
-            'Let\'s go right away!',
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-          ),
-          onPressed: () => _onIntroEnd(context),
-        ),
-      ),
       pages: [
         PageViewModel(
-          title: "Fractional shares",
+          title: "Interactive chat features",
           body:
-          "1",
-          image: _buildImage('intro_screen1.png'),
-          decoration: pageDecoration,
-        ),
-        PageViewModel(
-          title: "Learn as you go",
-          body:
-          "2",
+          "",
           image: _buildImage('intro_screen_4.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Kids and teens",
+          title: "Easy to begin with",
           body:
-          "3",
+          "",
           image: _buildImage('intro_screen_5.png'),
           decoration: pageDecoration,
         ),
 
         PageViewModel(
-          title: "Title of last page - reversed",
-          bodyWidget: const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Click on ", style: bodyStyle),
-              Icon(Icons.edit),
-              Text(" to edit a post", style: bodyStyle),
-            ],
-          ),
+          title: "Click done and start texting",
+          body: '',
           decoration: pageDecoration.copyWith(
             bodyFlex: 2,
             imageFlex: 4,
             bodyAlignment: Alignment.bottomCenter,
-            imageAlignment: Alignment.topCenter,
+            imageAlignment: Alignment.center,
           ),
           image: _buildImage('intro_screen_6.png'),
           reverse: true,
