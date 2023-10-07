@@ -56,6 +56,16 @@ class _BottomNavigationState
                color: Colors.black,
              ),
              child: PopupMenuButton(
+               // offset: Offset(0.5, 0.5),
+               position: PopupMenuPosition.under,
+               elevation: 16,
+               constraints: BoxConstraints(
+                 minHeight: 200,
+                 minWidth: 250
+               ),
+               shape: RoundedRectangleBorder(
+                 borderRadius: BorderRadius.circular(20.0)
+               ),
                icon:Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
