@@ -56,7 +56,7 @@ class _BottomNavigationState
                color: Colors.black,
              ),
              child: PopupMenuButton(
-               // offset: Offset(0.5, 0.5),
+               offset: Offset(-65, -240),
                position: PopupMenuPosition.under,
                elevation: 16,
                constraints: BoxConstraints(
