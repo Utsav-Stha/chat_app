@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../../datas/user_data.dart';
-
-
-
 
 class ChatSection extends StatelessWidget {
   ChatSection({Key? key}) : super(key: key);
@@ -19,9 +15,9 @@ class ChatSection extends StatelessWidget {
           itemBuilder: (context , index){
             return Padding(
               padding: const EdgeInsets.only(bottom: 12),
-              child: Row(
+              child: Row (
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                children:[
                   Expanded(
                     flex: 2,
                     child: CircleAvatar(

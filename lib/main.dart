@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-
-import 'package:messenger_app/features/profile/profile_page.dart';
-import 'bottom_navigation.dart';
-import 'features/home/home_page.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'features/onboard/OnBoardingPage.dart';
 
-void main() {
+Future<void> main() async {
+
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await Future.delayed(const Duration(milliseconds: 3000), () {});
+  FlutterNativeSplash.remove();
   runApp(const MyApp());
 }
 
@@ -24,15 +26,10 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
       home: OnBoardingPage(),
-
-
     );
   }
 }
-
-

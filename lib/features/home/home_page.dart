@@ -16,8 +16,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+  Widget build(BuildContext context){
+    Size sze = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: Padding(
