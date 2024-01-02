@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
                         return BottomNavigation();
                       }));
                     },

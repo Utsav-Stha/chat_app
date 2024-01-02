@@ -48,11 +48,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 color: Colors.black,
               ),
               child: PopupMenuButton(
-                offset: const Offset(-65, -240),
+                offset: const Offset(-35, -200),
                 position: PopupMenuPosition.under,
                 elevation: 16,
                 constraints:
-                    const BoxConstraints(minHeight: 200, minWidth: 250),
+                    const BoxConstraints(minHeight: 150, minWidth: 200),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
                 icon: const Row(

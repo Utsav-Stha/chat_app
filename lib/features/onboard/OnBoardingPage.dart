@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:messenger_app/config/hive/hive_data_source.dart';
 import '../../bottom_navigation.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -13,7 +14,9 @@ class OnBoardingPage extends StatefulWidget {
 class OnBoardingPageState extends State<OnBoardingPage> {
   final introKey = GlobalKey<IntroductionScreenState>();
 
-  void _onIntroEnd(context) {
+  void _onIntroEnd(context) async {
+    var hive = HiveDataSource();
+    hive.updateFirstInstalled(false);
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => BottomNavigation()));
   }
@@ -89,7 +92,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
       back: const Icon(Icons.arrow_back, color: Colors.white),
       skip: const Text('Skip',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-      next: const Icon(Icons.arrow_forward,color: Colors.yellowAccent),
+      next: const Icon(Icons.arrow_forward, color: Colors.yellowAccent),
       done: const Text('Done',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
       curve: Curves.fastLinearToSlowEaseIn,
