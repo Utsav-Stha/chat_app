@@ -1,16 +1,23 @@
-# messenger_app
+# chat_app
 
-A new Flutter project.
+A Flutter project showcasing UI of a Chat App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This application consist of multiple features like:
+- Splash Screen
+- Introduction Screen
+- Navigation between multiple pages
+- Local Database
 
-A few resources to get you started if this is your first Flutter project:
+Hive(a Local Database) is used to store the state of the application, which checks if the user installed the application first time or not.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Accordingly the application navigates to either Home page or Introduction Screen.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Output
+
+
+
+https://github.com/Utsav-Stha/chat_app/assets/140294538/509f2b07-c18f-4be5-8f7a-a873885adede
+
+
